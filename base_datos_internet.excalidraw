@@ -1,0 +1,1110 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "eQAOg3wSxSpeVTFuAXsNn",
+      "type": "text",
+      "x": 11515.26424756813,
+      "y": 5768.429963640117,
+      "width": 361.6166687011719,
+      "height": 125,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 1504901568,
+      "version": 1027,
+      "versionNonce": 1339732577,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744490702904,
+      "link": null,
+      "locked": false,
+      "text": "usuarios\ndocumento INTEGER PRIMARY KEY,\nnombre VARCHAR(20) NOT NULL,\napellido VARCHAR(20) NOT NULL,\ntelefono VARCHAR(10) NOT NULL",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "usuarios\ndocumento INTEGER PRIMARY KEY,\nnombre VARCHAR(20) NOT NULL,\napellido VARCHAR(20) NOT NULL,\ntelefono VARCHAR(10) NOT NULL",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "ug7zem4-ZH7y3WsjjGoCo",
+      "type": "text",
+      "x": 10401.830913217544,
+      "y": 5654.429963640117,
+      "width": 936.4833374023438,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 621062720,
+      "version": 1047,
+      "versionNonce": 413086272,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744296598328,
+      "link": null,
+      "locked": false,
+      "text": "direcciones\ndireccion_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nvereda VARCHAR(20) NOT NULL,\ndescripcion TEXT,\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "direcciones\ndireccion_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nvereda VARCHAR(20) NOT NULL,\ndescripcion TEXT,\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "JkByB27wa3pXsW0jlP6-q",
+      "type": "text",
+      "x": 12892.454875619887,
+      "y": 5969.492463640117,
+      "width": 856.2666625976562,
+      "height": 200,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aM",
+      "roundness": null,
+      "seed": 978790976,
+      "version": 1673,
+      "versionNonce": 1492515713,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744490023249,
+      "link": null,
+      "locked": false,
+      "text": "pagos\npago_id SERIAL PRIMARY KEY,\nfactura_id INTEGER NOT NULL,\nmonto_pagado DECIMAL(10,2) NOT NULL,\nmetodo VARCHAR(15) NOT NULL CHECK ( metodo IN ('transferencia', 'efectivo')),\nestado VARCHAR(10) NOT NULL CHECK (estado IN ('cancelado', 'pendiente')),\nfecha_pago TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nFOREIGN KEY (factura_id) REFERENCES facturas(factura_id) ON DELETE CASCADE",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "pagos\npago_id SERIAL PRIMARY KEY,\nfactura_id INTEGER NOT NULL,\nmonto_pagado DECIMAL(10,2) NOT NULL,\nmetodo VARCHAR(15) NOT NULL CHECK ( metodo IN ('transferencia', 'efectivo')),\nestado VARCHAR(10) NOT NULL CHECK (estado IN ('cancelado', 'pendiente')),\nfecha_pago TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nFOREIGN KEY (factura_id) REFERENCES facturas(factura_id) ON DELETE CASCADE",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "aMNckKxj4jtanWI3Weq37",
+      "type": "line",
+      "x": 11078.195349775853,
+      "y": 5718.063892211543,
+      "width": 426,
+      "height": 86,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aPV",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 2142767680,
+      "version": 89,
+      "versionNonce": 674238486,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471677718,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          426,
+          86
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "XTY0B9WBb-9TH-pmhLfFn",
+      "type": "text",
+      "x": 13145.395346724095,
+      "y": 5437.063892211543,
+      "width": 323.6000061035156,
+      "height": 125,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aW",
+      "roundness": null,
+      "seed": 1935667648,
+      "version": 771,
+      "versionNonce": 2077179210,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744472922185,
+      "link": null,
+      "locked": false,
+      "text": "planes\nplan_id SERIAL PRIMARY KEY,\nnombre VARCHAR(20) NOT NULL,\nvelocidad INTEGER NOT NULL,\ncosto DECIMAL(10,2) NOT NULL",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "planes\nplan_id SERIAL PRIMARY KEY,\nnombre VARCHAR(20) NOT NULL,\nvelocidad INTEGER NOT NULL,\ncosto DECIMAL(10,2) NOT NULL",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "k4wUh7zjZMLTrsUgtXbZl",
+      "type": "text",
+      "x": 12032.387030684056,
+      "y": 5513.063892211543,
+      "width": 941.6166381835938,
+      "height": 175,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aa",
+      "roundness": null,
+      "seed": 89211328,
+      "version": 511,
+      "versionNonce": 1099495169,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744489375155,
+      "link": null,
+      "locked": false,
+      "text": "usuarios_planes\ndocumento_usuario INTEGER NOT NULL,\nplan_id INTEGER NOT NULL,\nfecha_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nPRIMARY KEY (documento_usuario, plan_id),\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE,\nFOREIGN KEY (plan_id) REFERENCES planes(plan_id) ON DELETE CASCADE",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "usuarios_planes\ndocumento_usuario INTEGER NOT NULL,\nplan_id INTEGER NOT NULL,\nfecha_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nPRIMARY KEY (documento_usuario, plan_id),\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE,\nFOREIGN KEY (plan_id) REFERENCES planes(plan_id) ON DELETE CASCADE",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "sPVcnwat8gZwaAPr7X5KL",
+      "type": "line",
+      "x": 12662.195349775853,
+      "y": 5576.063892211543,
+      "width": 481,
+      "height": 98,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "FF7cHzEqSTeQ9682TIvZy"
+      ],
+      "frameId": null,
+      "index": "ac",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 295293504,
+      "version": 78,
+      "versionNonce": 1226125760,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744296261685,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          243,
+          -39
+        ],
+        [
+          481,
+          -98
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "mQM3CJuo17UJG0cytwLbD",
+      "type": "ellipse",
+      "x": 13114.195349775853,
+      "y": 5466.063892211543,
+      "width": 16,
+      "height": 35,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "FF7cHzEqSTeQ9682TIvZy"
+      ],
+      "frameId": null,
+      "index": "ad",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 772549056,
+      "version": 31,
+      "versionNonce": 1667222080,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744296261685,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "wn8iEF-LNWa_0oNPyVHzV",
+      "type": "line",
+      "x": 12677.195349775853,
+      "y": 5561.063892211543,
+      "width": 19,
+      "height": 24,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "FF7cHzEqSTeQ9682TIvZy"
+      ],
+      "frameId": null,
+      "index": "ae",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1537255872,
+      "version": 23,
+      "versionNonce": 1527314880,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744296261685,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          19,
+          24
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "xR35JWE-xGApl9QV-GgEh",
+      "type": "text",
+      "x": 10412.835036073933,
+      "y": 5949.595850572572,
+      "width": 936.4833374023438,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1b",
+      "roundness": null,
+      "seed": 1894965380,
+      "version": 699,
+      "versionNonce": 1888627260,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744384926854,
+      "link": null,
+      "locked": false,
+      "text": "instalaciones\ninstalacion_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nfecha_instalacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\ncosto DECIMAL(10,2) NOT NULL,\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "instalaciones\ninstalacion_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nfecha_instalacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\ncosto DECIMAL(10,2) NOT NULL,\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "SR4xKTBaKPVQTB84zJLd-",
+      "type": "ellipse",
+      "x": 11471.195349775853,
+      "y": 5777.063892211543,
+      "width": 20,
+      "height": 48,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "G2AsgxX461Lj32fIuvQkH"
+      ],
+      "frameId": null,
+      "index": "b1bG",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1234659776,
+      "version": 57,
+      "versionNonce": 724574538,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471691907,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "iPbDnrL9YybePCO48B9BM",
+      "type": "line",
+      "x": 11102.195349775853,
+      "y": 5705.063892211543,
+      "width": 12,
+      "height": 34,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "G2AsgxX461Lj32fIuvQkH"
+      ],
+      "frameId": null,
+      "index": "b1bV",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 543443520,
+      "version": 37,
+      "versionNonce": 2018832470,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471691907,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -12,
+          34
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "6GOeqvFQ8eRW4lyvOciaY",
+      "type": "line",
+      "x": 11087.076704775105,
+      "y": 6009.595850572572,
+      "width": 413,
+      "height": 208,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "G2AsgxX461Lj32fIuvQkH"
+      ],
+      "frameId": null,
+      "index": "b1c",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1052808836,
+      "version": 105,
+      "versionNonce": 401696778,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471691907,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          196,
+          -117
+        ],
+        [
+          413,
+          -208
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "ClcwxzfScrEth5vCTRIK0",
+      "type": "line",
+      "x": 11090.076704775105,
+      "y": 5976.595850572572,
+      "width": 39,
+      "height": 40,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "G2AsgxX461Lj32fIuvQkH"
+      ],
+      "frameId": null,
+      "index": "b1d",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 666104252,
+      "version": 34,
+      "versionNonce": 675313046,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471691907,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          39,
+          40
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "OtUKQi_6Bs4N1HMogjjJ5",
+      "type": "text",
+      "x": 11984.835036073933,
+      "y": 5913.595850572572,
+      "width": 936.4833374023438,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b1z",
+      "roundness": null,
+      "seed": 889957252,
+      "version": 493,
+      "versionNonce": 1661302166,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744472416506,
+      "link": null,
+      "locked": false,
+      "text": "facturas\nfactura_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nfecha_emision TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nmonto_total DECIMAL(10,2) NOT NULL,\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "facturas\nfactura_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nfecha_emision TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nmonto_total DECIMAL(10,2) NOT NULL,\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "U1ZFpIHS8JJ7rv0Bq_18d",
+      "type": "line",
+      "x": 12287.195349775853,
+      "y": 5548.063892211543,
+      "width": 409,
+      "height": 254,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "JoSCncRZW68SLJBUWgKmp"
+      ],
+      "frameId": null,
+      "index": "b1zG",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 220346944,
+      "version": 144,
+      "versionNonce": 1980299914,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471662944,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -269,
+          87
+        ],
+        [
+          -409,
+          254
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "aOOp-h904J_jZYhy44A9X",
+      "type": "line",
+      "x": 12251.195349775853,
+      "y": 5531.063892211543,
+      "width": 12,
+      "height": 43,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "JoSCncRZW68SLJBUWgKmp"
+      ],
+      "frameId": null,
+      "index": "b1zV",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 565780928,
+      "version": 34,
+      "versionNonce": 117525270,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471662944,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          12,
+          43
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "cM-kitk4UPmkj34B6ZhZ2",
+      "type": "ellipse",
+      "x": 11884.195349775853,
+      "y": 5772.063892211543,
+      "width": 11,
+      "height": 48.00000000000001,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "JoSCncRZW68SLJBUWgKmp"
+      ],
+      "frameId": null,
+      "index": "b20",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 735832640,
+      "version": 141,
+      "versionNonce": 1557993802,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471662944,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "YwB6qivJ4xpff66GaFF0D",
+      "type": "line",
+      "x": 11877.967329775105,
+      "y": 5799.345850572572,
+      "width": 364,
+      "height": 177,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "JoSCncRZW68SLJBUWgKmp"
+      ],
+      "frameId": null,
+      "index": "b20V",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1446566282,
+      "version": 82,
+      "versionNonce": 1041463382,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471662944,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          364,
+          177
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "t3RfxFdVffZezLCOqZ_-w",
+      "type": "line",
+      "x": 12236.967329775105,
+      "y": 5947.345850572572,
+      "width": 22,
+      "height": 40,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "JoSCncRZW68SLJBUWgKmp"
+      ],
+      "frameId": null,
+      "index": "b21",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 2008734550,
+      "version": 37,
+      "versionNonce": 1206023638,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744471662944,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -22,
+          40
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "N2s1uskew3BYlsYAPOXFB",
+      "type": "text",
+      "x": 12962.720442568074,
+      "y": 5780.377100572572,
+      "width": 1007.1500244140625,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "b23",
+      "roundness": null,
+      "seed": 1005515210,
+      "version": 738,
+      "versionNonce": 1176354159,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744489979745,
+      "link": null,
+      "locked": false,
+      "text": "detalles_factura\ndetalles_factura_id SERIAL PRIMARY KEY,\nfactura_id INTEGER NOT NULL,\ntipo_detalle VARCHAR(20) NOT NULL CHECK (tipo_detalle IN ('mensualidad', 'instalación', 'reconexión')),\nmonto DECIMAL(10,2) NOT NULL,\nFOREIGN KEY (factura_id) REFERENCES facturas(factura_id) ON DELETE CASCADE",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "detalles_factura\ndetalles_factura_id SERIAL PRIMARY KEY,\nfactura_id INTEGER NOT NULL,\ntipo_detalle VARCHAR(20) NOT NULL CHECK (tipo_detalle IN ('mensualidad', 'instalación', 'reconexión')),\nmonto DECIMAL(10,2) NOT NULL,\nFOREIGN KEY (factura_id) REFERENCES facturas(factura_id) ON DELETE CASCADE",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "_XNaCDDuCplszCkXnlXiL",
+      "type": "line",
+      "x": 12636.014204775105,
+      "y": 5950.064600572572,
+      "width": 632,
+      "height": 105,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "4AXbGHIaz6x4eRKVBGPgU"
+      ],
+      "frameId": null,
+      "index": "b26",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 401048458,
+      "version": 203,
+      "versionNonce": 447077654,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744472891509,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          216,
+          -96
+        ],
+        [
+          632,
+          -105
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "cXIqQxdBMQ_HSfDn4-D-C",
+      "type": "line",
+      "x": 12635.248579775105,
+      "y": 5947.142725572572,
+      "width": 509,
+      "height": 81,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "4AXbGHIaz6x4eRKVBGPgU"
+      ],
+      "frameId": null,
+      "index": "b27",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 481747658,
+      "version": 111,
+      "versionNonce": 2038631062,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744472891509,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          509,
+          81
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "lL3mYRCpEBNxQCkEpnzFb",
+      "type": "ellipse",
+      "x": 12646.014204775105,
+      "y": 5927.064600572572,
+      "width": 16,
+      "height": 35,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "4AXbGHIaz6x4eRKVBGPgU"
+      ],
+      "frameId": null,
+      "index": "b28",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1212028950,
+      "version": 99,
+      "versionNonce": 469307850,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744472891509,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "eh_CE2ZEt3TnGWGM0GqZU",
+      "type": "line",
+      "x": 13122.248579775105,
+      "y": 6003.142725572572,
+      "width": 6,
+      "height": 34,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "4AXbGHIaz6x4eRKVBGPgU"
+      ],
+      "frameId": null,
+      "index": "b29",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 97177098,
+      "version": 56,
+      "versionNonce": 154224598,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744472891509,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -6,
+          34
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "_5cj6EIMrbcC-e_0e0Y_M",
+      "type": "line",
+      "x": 13228.435248540338,
+      "y": 5826.1825537458035,
+      "width": 1,
+      "height": 41,
+      "angle": 0,
+      "strokeColor": "#1971c2",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [
+        "4AXbGHIaz6x4eRKVBGPgU"
+      ],
+      "frameId": null,
+      "index": "b2A",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1182240790,
+      "version": 35,
+      "versionNonce": 1397246090,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1744472891509,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          41
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
