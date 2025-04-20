@@ -199,8 +199,8 @@
     {
       "id": "k4wUh7zjZMLTrsUgtXbZl",
       "type": "text",
-      "x": 12032.387030684056,
-      "y": 5513.063892211543,
+      "x": 12031.387030684056,
+      "y": 5517.063892211543,
       "width": 941.6166381835938,
       "height": 275,
       "angle": 0,
@@ -216,30 +216,30 @@
       "index": "aa",
       "roundness": null,
       "seed": 89211328,
-      "version": 759,
-      "versionNonce": 1196203880,
+      "version": 859,
+      "versionNonce": 1213665179,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744774523353,
+      "updated": 1745032975563,
       "link": null,
       "locked": false,
-      "text": "usuarios_planes\ndocumento_usuario INTEGER NOT NULL,\nplan_id INTEGER NOT NULL,\nfecha_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nfecha_cancelacion TIMESTAMP,\nestado_servicio BOOLEAN DEFAULT TRUE CHECK (\n(estado_servicio = TRUE AND fecha_cancelacion is NULL) OR \n( estado_servicio = FALSE AND fecha_cancelacion is NOT NULL)),\nPRIMARY KEY (documento_usuario, plan_id),\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE,\nFOREIGN KEY (plan_id) REFERENCES planes(plan_id) ON DELETE CASCADE",
+      "text": "usuarios_planes\nusuario_plan_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nplan_id INTEGER NOT NULL,\nfecha_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nfecha_cancelacion TIMESTAMP,\nestado_servicio BOOLEAN DEFAULT TRUE CHECK (\n(estado_servicio = TRUE AND fecha_cancelacion is NULL) OR \n( estado_servicio = FALSE AND fecha_cancelacion is NOT NULL)),\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE,\nFOREIGN KEY (plan_id) REFERENCES planes(plan_id) ON DELETE CASCADE",
       "fontSize": 20,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "usuarios_planes\ndocumento_usuario INTEGER NOT NULL,\nplan_id INTEGER NOT NULL,\nfecha_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nfecha_cancelacion TIMESTAMP,\nestado_servicio BOOLEAN DEFAULT TRUE CHECK (\n(estado_servicio = TRUE AND fecha_cancelacion is NULL) OR \n( estado_servicio = FALSE AND fecha_cancelacion is NOT NULL)),\nPRIMARY KEY (documento_usuario, plan_id),\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE,\nFOREIGN KEY (plan_id) REFERENCES planes(plan_id) ON DELETE CASCADE",
+      "originalText": "usuarios_planes\nusuario_plan_id SERIAL PRIMARY KEY,\ndocumento_usuario INTEGER NOT NULL,\nplan_id INTEGER NOT NULL,\nfecha_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\nfecha_cancelacion TIMESTAMP,\nestado_servicio BOOLEAN DEFAULT TRUE CHECK (\n(estado_servicio = TRUE AND fecha_cancelacion is NULL) OR \n( estado_servicio = FALSE AND fecha_cancelacion is NOT NULL)),\nFOREIGN KEY (documento_usuario) REFERENCES usuarios(documento) ON DELETE CASCADE,\nFOREIGN KEY (plan_id) REFERENCES planes(plan_id) ON DELETE CASCADE",
       "autoResize": true,
       "lineHeight": 1.25
     },
     {
       "id": "sPVcnwat8gZwaAPr7X5KL",
       "type": "line",
-      "x": 12662.195349775853,
-      "y": 5576.063892211543,
-      "width": 481,
-      "height": 98,
+      "x": 12708.614603711563,
+      "y": 5602.482146924904,
+      "width": 430.49255015569486,
+      "height": 123.22717238099396,
       "angle": 0,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
@@ -249,19 +249,19 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "FF7cHzEqSTeQ9682TIvZy"
+        "s5uG4YpgADfqdpQttCfXR"
       ],
       "frameId": null,
-      "index": "ac",
+      "index": "aaV",
       "roundness": {
         "type": 2
       },
       "seed": 295293504,
-      "version": 78,
-      "versionNonce": 1226125760,
+      "version": 182,
+      "versionNonce": 1040013211,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744296261685,
+      "updated": 1745033065065,
       "link": null,
       "locked": false,
       "points": [
@@ -270,12 +270,12 @@
           0
         ],
         [
-          243,
-          -39
+          234.369417230424,
+          -47.12101758019162
         ],
         [
-          481,
-          -98
+          430.49255015569486,
+          -123.22717238099396
         ]
       ],
       "lastCommittedPoint": null,
@@ -287,10 +287,10 @@
     {
       "id": "mQM3CJuo17UJG0cytwLbD",
       "type": "ellipse",
-      "x": 13114.195349775853,
+      "x": 13118.478704897372,
       "y": 5466.063892211543,
-      "width": 16,
-      "height": 35,
+      "width": 13.58810977648881,
+      "height": 29.723990136069272,
       "angle": 0,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
@@ -300,29 +300,29 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "FF7cHzEqSTeQ9682TIvZy"
+        "s5uG4YpgADfqdpQttCfXR"
       ],
       "frameId": null,
-      "index": "ad",
+      "index": "ab",
       "roundness": {
         "type": 2
       },
       "seed": 772549056,
-      "version": 31,
-      "versionNonce": 1667222080,
+      "version": 56,
+      "versionNonce": 752468885,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744296261685,
+      "updated": 1745033065065,
       "link": null,
       "locked": false
     },
     {
       "id": "wn8iEF-LNWa_0oNPyVHzV",
       "type": "line",
-      "x": 12677.195349775853,
-      "y": 5561.063892211543,
-      "width": 19,
-      "height": 24,
+      "x": 12721.353456627023,
+      "y": 5590.743294009446,
+      "width": 16.13588035958046,
+      "height": 20.382164664733217,
       "angle": 0,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
@@ -332,19 +332,19 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "FF7cHzEqSTeQ9682TIvZy"
+        "s5uG4YpgADfqdpQttCfXR"
       ],
       "frameId": null,
-      "index": "ae",
+      "index": "ac",
       "roundness": {
         "type": 2
       },
       "seed": 1537255872,
-      "version": 23,
-      "versionNonce": 1527314880,
+      "version": 83,
+      "versionNonce": 2034609211,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744296261685,
+      "updated": 1745033065065,
       "link": null,
       "locked": false,
       "points": [
@@ -353,8 +353,8 @@
           0
         ],
         [
-          19,
-          24
+          16.13588035958046,
+          20.382164664733217
         ]
       ],
       "lastCommittedPoint": null,
@@ -617,10 +617,10 @@
     {
       "id": "U1ZFpIHS8JJ7rv0Bq_18d",
       "type": "line",
-      "x": 12287.195349775853,
-      "y": 5548.063892211543,
-      "width": 409,
-      "height": 254,
+      "x": 12280.195349775853,
+      "y": 5580.063892211543,
+      "width": 402,
+      "height": 222,
       "angle": 0,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
@@ -630,7 +630,7 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "JoSCncRZW68SLJBUWgKmp"
+        "9pgvrFOPT18WNKRLkt_WO"
       ],
       "frameId": null,
       "index": "b1zG",
@@ -638,11 +638,11 @@
         "type": 2
       },
       "seed": 220346944,
-      "version": 144,
-      "versionNonce": 1980299914,
+      "version": 181,
+      "versionNonce": 628680027,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744471662944,
+      "updated": 1745033077272,
       "link": null,
       "locked": false,
       "points": [
@@ -651,12 +651,12 @@
           0
         ],
         [
-          -269,
-          87
+          -262,
+          55
         ],
         [
-          -409,
-          254
+          -402,
+          222
         ]
       ],
       "lastCommittedPoint": null,
@@ -668,11 +668,11 @@
     {
       "id": "aOOp-h904J_jZYhy44A9X",
       "type": "line",
-      "x": 12251.195349775853,
-      "y": 5531.063892211543,
+      "x": 12253.195349775853,
+      "y": 5569.063892211543,
       "width": 12,
       "height": 43,
-      "angle": 0,
+      "angle": 0.05610934527798772,
       "strokeColor": "#1971c2",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
@@ -681,7 +681,7 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "JoSCncRZW68SLJBUWgKmp"
+        "9pgvrFOPT18WNKRLkt_WO"
       ],
       "frameId": null,
       "index": "b1zV",
@@ -689,17 +689,21 @@
         "type": 2
       },
       "seed": 565780928,
-      "version": 34,
-      "versionNonce": 117525270,
+      "version": 160,
+      "versionNonce": 922153429,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744471662944,
+      "updated": 1745033077272,
       "link": null,
       "locked": false,
       "points": [
         [
           0,
           0
+        ],
+        [
+          11.786736378544447,
+          36.827765884161636
         ],
         [
           12,
@@ -728,7 +732,7 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "JoSCncRZW68SLJBUWgKmp"
+        "9pgvrFOPT18WNKRLkt_WO"
       ],
       "frameId": null,
       "index": "b20",
@@ -736,11 +740,11 @@
         "type": 2
       },
       "seed": 735832640,
-      "version": 141,
-      "versionNonce": 1557993802,
+      "version": 143,
+      "versionNonce": 227115515,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744471662944,
+      "updated": 1745033077272,
       "link": null,
       "locked": false
     },
@@ -760,7 +764,7 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "JoSCncRZW68SLJBUWgKmp"
+        "9pgvrFOPT18WNKRLkt_WO"
       ],
       "frameId": null,
       "index": "b20V",
@@ -768,11 +772,11 @@
         "type": 2
       },
       "seed": 1446566282,
-      "version": 82,
-      "versionNonce": 1041463382,
+      "version": 84,
+      "versionNonce": 189001525,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744471662944,
+      "updated": 1745033077272,
       "link": null,
       "locked": false,
       "points": [
@@ -807,7 +811,7 @@
       "roughness": 1,
       "opacity": 100,
       "groupIds": [
-        "JoSCncRZW68SLJBUWgKmp"
+        "9pgvrFOPT18WNKRLkt_WO"
       ],
       "frameId": null,
       "index": "b21",
@@ -815,11 +819,11 @@
         "type": 2
       },
       "seed": 2008734550,
-      "version": 37,
-      "versionNonce": 1206023638,
+      "version": 39,
+      "versionNonce": 782076571,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1744471662944,
+      "updated": 1745033077272,
       "link": null,
       "locked": false,
       "points": [
